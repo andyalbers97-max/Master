@@ -1,0 +1,25 @@
+# Beispielkonfiguration für friday PoC
+
+thresholds:
+  suggest: 0.5
+  autonomous: 0.85
+
+poll_interval: 10  # Sekunden
+
+notifications:
+  enable_desktop: true
+  enable_telegram: false
+  telegram_bot_token: ''
+  telegram_chat_id: ''
+
+password_manager:
+  type: 'bitwarden'  # options: bitwarden, keepass, none
+  bitwarden_session_env: 'BW_SESSION'  # env var for bw session
+  keepass_path: ''
+  keepass_master: ''
+
+paths_to_scan: []  # nur Pfade die explizit freigegeben werden
+
+autonomy:
+  allow_autonomous_actions: true
+  allowed_actions: ['isolate_network','quarantine_files','kill_process']
